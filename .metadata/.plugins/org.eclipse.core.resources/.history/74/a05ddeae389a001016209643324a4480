@@ -1,0 +1,40 @@
+/*
+ * Descripción: Practica de Operadores basicos
+ * Autor: Gabriel Guzmán
+ * Fecha: 25/09/2025
+ */
+
+package operadoresBasicos;
+
+public class OperadoresBasicos {
+
+	public static void main(String[] args) {
+		
+		int dato1, dato2;
+		
+		dato1 = 5;
+		dato2 = 6;
+		
+		int suma = dato1 + dato2;
+		
+		System.out.print("La suma de dato1 y dato2 es: " + suma);
+		
+		int resta = dato1 - dato2;
+		
+		System.out.print("La suma de dato1 y dato2 es: " + resta);
+		
+		int miltiplicacion = dato1 * dato2;
+		
+		System.out.print("La suma de dato1 y dato2 es: " + miltiplicacion);
+		
+		int division = dato1 / dato2;
+		
+		System.out.print("La suma de dato1 y dato2 es: " + division);
+		
+
+		
+		
+
+	}
+
+}

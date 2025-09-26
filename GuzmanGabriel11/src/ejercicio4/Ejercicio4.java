@@ -1,0 +1,30 @@
+/*
+ * Descripción: Prueva de los tipos de variables
+ * Autor: Gabriel Guzmán
+ * Fecha: 24/09/2025
+ */
+
+package ejercicio4;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		
+		byte enteroPequenno = 100;
+		short enteroMediano = 10000;
+		int enteroGrande = 1000000000;
+		char caracter = 'a';
+		float numeroDecimal = 5.10f;
+		double numeroFlotante = 10000.1234567;
+		String cadenaCaracteres = "hola";
+		
+		System.out.println("El valor de la variable de tipo entero (enteroPequenno) es: " + enteroPequenno);
+		System.out.println("El valor de la variable de tipo entero (enteroMediano) es: " + enteroMediano);
+		System.out.println("El valor de la variable de tipo entero (enteroGrande) es: " + enteroGrande);
+		System.out.println("El valor de la variable de tipo carácter (caracter) es: " + caracter);
+		System.out.println("El valor de la variable de tipo decimal (numeroDecimal) es: " + numeroDecimal);
+		System.out.println("El valor de la variable de tipo decimal (numeroFlotante) es: " + numeroFlotante);
+		System.out.println("El valor de la variable de tipo caracteres (cadenaCaracteres) es: " + cadenaCaracteres);
+		
+	}
+}

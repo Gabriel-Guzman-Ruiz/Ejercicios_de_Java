@@ -1,0 +1,50 @@
+/*
+ * Descripción: Jerecicios de cálculo aritméricos
+ * Autor: Gabriel Guzmán
+ * Fecha: 25/09/2025
+ */
+
+package ejercicio2;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		
+		Scanner peticion = new Scanner(System.in);
+		
+		int numero1, numero2;
+		
+		System.out.println("CÁLCULOS ARIMÉTICOS");
+		System.out.println("-------------------");
+		System.out.println("Introduzca dos números reales:");
+		
+		System.out.print("Primer número: ");
+		numero1 = peticion.nextByte();
+		
+		System.out.print("Segundo número: ");
+		numero2 = peticion.nextByte();
+
+		int doble1 = numero1 * 2;
+		
+		double mita2 = numero2 / 2.00;
+		
+		int suma12 = numero1 + numero2;
+		int cuatradosuma12 = suma12 * suma12;	
+		
+		int cuatrado1 = numero1 * numero1;
+		int cuatrado2 = numero2 * numero2;
+		int sumacuatrado12 = cuatrado1 + cuatrado2;
+		double decimasumacuatrado12 = sumacuatrado12 / 10.00;
+		
+		System.out.println("RESULTADO");
+		System.out.println("---------");
+		System.out.println("Doble del primer número: " + doble1);
+		System.out.println("Mitad del segundo número: " + mita2);
+		System.out.println("Cuadrado de la suma de ambos números: " + cuatradosuma12);
+		System.out.println("Décima parte de la suma de los cuadrados de ambos números: " +  decimasumacuatrado12);
+		
+	}
+
+}

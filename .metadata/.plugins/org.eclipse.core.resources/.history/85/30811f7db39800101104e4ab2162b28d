@@ -1,0 +1,16 @@
+/*
+ * Descripción: Prueva se los tipos de variables
+ * Autor: Gabriel Guzmán
+ * Fecha: 23/09/2025
+ */
+
+package ejercicio3;
+
+public class Ejercicio3 {
+	
+	public static void main(String[] args) {
+
+
+	}
+
+}

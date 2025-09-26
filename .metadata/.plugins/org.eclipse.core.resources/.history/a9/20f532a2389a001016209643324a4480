@@ -1,0 +1,24 @@
+/*
+ * Descripción: Mostrar en pantalla los palos de una baraja
+ * Autor: Gabriel Guzmán
+ * Fecha: 25/09/2025
+ */
+
+package operadoresBasicos;
+
+public class OperadoresBasicos {
+
+	public static void main(String[] args) {
+		
+		int dato1, dato2;
+		
+		dato1 = 5;
+		dato2 = 6;
+		
+		int suma = dato1 + dato2;
+		
+		System.out.print("La suma de dato1 y dato2 es: " + suma);
+
+	}
+
+}

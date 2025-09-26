@@ -1,0 +1,31 @@
+/*
+ * Descripción: Prueva se los tipos de variables
+ * Autor: Gabriel Guzmán
+ * Fecha: 23/09/2025
+ */
+
+package variables;
+
+public class TiposDeVariables {
+
+	public static void main(String[] args) {
+			byte edadAlumno; //Declaración
+			edadAlumno = 0; //inicialización
+			
+			byte edadProfesor =0; // Declaración e Inicialización
+			
+			System.out.println("Valor de la variable: " + edadAlumno);
+			
+			double pesoAlumno =92.5,alturaAlumno =1.76;
+			
+			pesoAlumno = 94;
+			
+			System.out.println("Peso: " + pesoAlumno + "Altura: " + alturaAlumno);
+			
+			char letrasDni;
+			letraDni = 'B';
+			
+			String nombreAlumno;
+			nobreAlumno = "Alberto"
+	}
+}
