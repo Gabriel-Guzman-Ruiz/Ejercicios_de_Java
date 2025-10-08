@@ -14,25 +14,51 @@ public class Pruevas {
 		
 		Scanner pedido = new Scanner(System.in);
 		
-		int num1;
-		int num2;
+		double nota;
+		String resultado = "nada";
 		
+		System.out.println("-----------------------------");
+		System.out.println("COMPROVADOR DE CALIFICACIONES");
+		System.out.println("-----------------------------");
 		
-		System.out.print("Dame tu salario bruto: ");
-		num1 = pedido.nextInt();
+		System.out.print("Introduse la nota de el examen: ");
+		nota = pedido.nextDouble();
 		
-		System.out.print("Dame tu numero de años travajando: ");
-		num2 = pedido.nextInt();
+		System.out.println("----------");
+		System.out.println("RESULTADOS");
+		System.out.println("----------");
 		
-		int num3 = num2 *2;
+		if (nota >= 0 && nota <= 10) {
 			
-		double num4 = num3;
+			if ( nota < 5) {
+				
+				resultado = "INSUFICIENTE";
+				
+			} else if ( nota < 6) {
+					
+				resultado = "SUFICIENTE";
+				
+			} else if ( nota < 7) {
+						
+				resultado = "BIEN";
+						
+			} else if ( nota < 9) {
+							
+				resultado = "NOTABLE";
+							
+			} else {
+								
+				resultado = "SOBRESALIENTE";
+								
+			}
+			
+		} else {
+			
+			resultado = "No es valido";
+		}
 		
-		double num5 = num4 /100;
+		System.out.println("Tu calificación es: " + resultado);
 		
-		double num6 = num1 * (num4/100);
-		
-		System.out.println(" -- " + num1 + " -- " + num2 + " -- " + num3 + " -- " + num4 + " -- " + num5 + " -- " + num6);
-
 	}
+	
 }
