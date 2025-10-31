@@ -1,7 +1,7 @@
 /*
- * Descripción: Pidiendo datos para aseptar o denegar solisitudes de travajo
+ * Descripción: Pide una nota y indicale su calificacion
  * Autor: Gabriel Guzmán
- * Fecha: 8/10/2025
+ * Fecha: 9/10/2025
  */
 
 package ejercicio3;
@@ -14,29 +14,28 @@ public class Ejercicio3 {
 		
 		Scanner pedido = new Scanner(System.in);
 		
-		int nombre;
-		String apellidos;
+		int nota;
+		String resultado;
 		
-		System.out.println("---------------------");
-		System.out.println("ENTREVISTA DE TRAVAJO");
-		System.out.println("---------------------");
+		System.out.println("--------------------");
+		System.out.println("CALIFICACIÓN DE NOTA");
+		System.out.println("--------------------");
 		
-		System.out.print("Dame tu nombre: ");
-		nombre = pedido.nextLine();
-		
-		System.out.print("Dame tus apellidos: ");
-		apellidos = pedido.nextLine();
+		System.out.print("Dame tu nota: ");
+		nota = pedido.nextInt();
 		
 		System.out.println("----------");
 		System.out.println("RESULTADOS");
 		System.out.println("----------");
 
 		
-		switch (noteTedondeado) {
+		switch (nota) {
 		
 		case 0: case 1: case 2: case 3: case 4: case 5: {
 			
 			resultado = "INSUFICIENTE";
+			
+			System.out.println("Tu nota es: " + resultado);
 			
 			break;
 			}
@@ -45,12 +44,16 @@ public class Ejercicio3 {
 			
 			resultado = "SUFICIENTE";
 			
+			System.out.println("Tu nota es: " + resultado);
+			
 			break;
 			}
 		
 		case 7: case 8:{
 			
 			resultado = "BIEN";
+			
+			System.out.println("Tu nota es: " + resultado);
 			
 			break;
 			}
@@ -59,6 +62,8 @@ public class Ejercicio3 {
 			
 			resultado = "NOTABLE";
 			
+			System.out.println("Tu nota es: " + resultado);
+			
 			break;
 			}
 		
@@ -66,14 +71,15 @@ public class Ejercicio3 {
 			
 			resultado = "SOBRESALIENTE";
 			
+			System.out.println("Tu nota es: " + resultado);
+			
 			break;
 			}
 		
 		default:{
 			
-			nota = 0;
+			System.out.println("Nota introducida incorectamente");
 			
-			resultado = "INSUFICIENTE";
 			}
 			
 		}
