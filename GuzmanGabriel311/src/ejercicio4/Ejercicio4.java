@@ -1,12 +1,11 @@
 /*
- * Descripción: Matriz de tamaño N x M y con valores introdizidos por teclado, mostramos la cantodad de numeros que sean iguales, mayores y menores a 0.
+ * Descripción: Calculamos la nota minima, maxima y la media de la nota de 4 estudiantes.
  * Autor: Gabriel Guzmán
  * Fecha: 31/10/2025
  */
 
 package ejercicio4;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio4 { 
@@ -29,22 +28,22 @@ public class Ejercicio4 {
 		
 		matriz = new double [ALUMNOS] [ASIGNATURAS];
 		
-		System.out.println("--------------------------------");
-		System.out.println("A MATRIZ N X M");
-		System.out.println("-----------------------------------");
+		System.out.println("----------------------------------------------------");
+		System.out.println("MEDIA, NIMIMA Y MAXIMA DE LAS NOTAS DE 4 ESTUDIANTES");
+		System.out.println("----------------------------------------------------");
 			
 		for (int i = 0; i < ALUMNOS; i ++) {
 			
-			System.out.println("---------------------------------------------------");
-			
 			for (int y = 0; y < ASIGNATURAS; y ++) {
 				
-				System.out.print("Nota se la asignatira" + (y + 1) + " del alumno " + (i + 1) + " es: ");
+				System.out.print("Nota se la asignatira " + (y + 1) + " del alumno " + (i + 1) + " es: ");
 				nota = pedido.nextDouble();	
 				
 				matriz [i] [y]  = nota;
 			
 			}
+			
+			System.out.println("---------------------------------------------------");
 			
 		}
 		
@@ -74,14 +73,11 @@ public class Ejercicio4 {
 			
 			notaMedia = notaSuma / ASIGNATURAS;
 			
-			System.out.println("---------------------------------------------------");
+			System.out.println("-----------------------------------------------------------");
 			System.out.println("Nota minima de el alumnos " + (i + 1) + " es: " + notaMinima);
 			System.out.println("Nota maxima de el alumnos " + (i + 1) + " es: " + notaMaxima);
 			System.out.println("La media de las notas del alumnos " + (i + 1) + " es: " + notaMedia);
 			
-		}
-		
-
-		  
+		} 
 	}
 }
