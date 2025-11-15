@@ -68,7 +68,7 @@ Este repositorio seguirá creciendo conforme avance en mis estudios.
 
 ## 📬 Contacto
 
-✉️ **Email:** *[gabrielguzman20004@gmail.com]*  
+✉️ **Email:** *[gabrielguzman2004@gmail.com]*  
 🐙 **GitHub:** [Mi Perfil](https://github.com/Gabriel-Guzman-Ruiz)
 
 ---
