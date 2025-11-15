@@ -11,7 +11,7 @@ Mi objetivo con este proyecto es mostrar mi proceso de aprendizaje, organizació
 Aquí encontrarás diferentes ejercicios divididos en carpetas temáticas según el módulo o tipo de problema:
 
 🔸 **Ejercicios básicos de Java (variables, operadores, condicionales y bucles)**  
-👉 [Abrir carpeta](./EjerciciosBasicos)
+👉 [Abrir carpeta](./GuzmanGabriel00)
 
 🔸 **Programación Orientada a Objetos (POO)**  
 👉 [Abrir carpeta](./POO)
@@ -55,8 +55,8 @@ Este repositorio seguirá creciendo conforme avance en mis estudios.
 
 ## 📬 Contacto
 
-✉️ **Email:** *[tu correo]*  
-🐙 **GitHub:** [Mi Perfil](https://github.com/tuusuario)
+✉️ **Email:** *[tu correo]* (gabrielguzman2000@gmail.com) 
+🐙 **GitHub:** [Mi Perfil](https://github.com/Gabriel-Guzman-Ruiz)
 
 ---
 
