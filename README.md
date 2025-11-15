@@ -10,22 +10,35 @@ Mi objetivo con este proyecto es mostrar mi proceso de aprendizaje, organizació
 
 Aquí encontrarás diferentes ejercicios divididos en carpetas temáticas según el módulo o tipo de problema:
 
-🔸 **Ejercicios básicos de Java (variables, operadores, condicionales y bucles)**  
-👉 [Abrir carpeta](./EjerciciosBasicos)
+🔸 **Ejercicios en el clase**  
+👉 [Abrir carpeta](./GuzmanGabriel00/src)
 
-🔸 **Programación Orientada a Objetos (POO)**  
-👉 [Abrir carpeta](./POO)
+🔸 **1.1. Primer contacto con Java - Eclipse**  
+👉 [Abrir carpeta](./GuzmanGabriel11/src)
 
-🔸 **Ejercicios de funciones y procedimientos**  
-👉 [Abrir carpeta](./Funciones)
+🔸 **1.2. Uso de variables y E/S estándar**  
+👉 [Abrir carpeta](./GuzmanGabriel12/src)
 
-🔸 **Colecciones y uso de estructuras de datos**  
-👉 [Abrir carpeta](./Colecciones)
+🔸 **1.3. Cálculos simples**  
+👉 [Abrir carpeta](./GuzmanGabriel13/src)
 
-🔸 **Manejo de ficheros**  
-👉 [Abrir carpeta](./Ficheros)
+🔸 **2.6. Condicionales**  
+👉 [Abrir carpeta](./GuzmanGabriel26/src)
 
-> *(Modifica los enlaces según tus nombres de carpetas reales)*
+🔸 **2.7. Condicionales II**  
+👉 [Abrir carpeta](./GuzmanGabriel27/src)
+
+🔸 **2.8. Bucles**  
+👉 [Abrir carpeta](./GuzmanGabriel28/src)
+
+🔸 **3.10. Vectores**  
+👉 [Abrir carpeta](./GuzmanGabriel310/src)
+
+🔸 **3.11. Matrices**  
+👉 [Abrir carpeta](./GuzmanGabriel311/src)
+
+🔸 **3.12. Cadenas de caracteres**  
+👉 [Abrir carpeta](./GuzmanGabriel312/src)
 
 ---
 
@@ -55,8 +68,8 @@ Este repositorio seguirá creciendo conforme avance en mis estudios.
 
 ## 📬 Contacto
 
-✉️ **Email:** *[tu correo]*  
-🐙 **GitHub:** [Mi Perfil](https://github.com/tuusuario)
+✉️ **Email:** *[gabrielguzman20004@gmail.com]*  
+🐙 **GitHub:** [Mi Perfil](https://github.com/Gabriel-Guzman-Ruiz)
 
 ---
 
