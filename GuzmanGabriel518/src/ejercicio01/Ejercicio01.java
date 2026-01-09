@@ -2,6 +2,8 @@ package ejercicio01;
 
 import java.util.Scanner;
 
+import libtarea3.Bombilla;
+
 public class Ejercicio01 {
 	
 	public static void main(String[] args) {
