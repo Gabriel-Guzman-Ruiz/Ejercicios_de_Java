@@ -12,7 +12,7 @@ import java.lang.Number;
 
 public class Alumno {
 
-	// ATRIVUTOS
+	// ATRIBUTOS
 	
 	// Atributos contante de clase	
 	
@@ -21,7 +21,7 @@ public class Alumno {
 	public final static int NUMERO_MAXIMA_DE_ALUMNOS = 1000;
 	
 
-	public final static LocalTime HORA_MAXIMA_ALUMNOS = null;
+	public final static LocalTime HORA_MAXIMA_ALUMNOS = LocalTime.of(9, 30);
 	
 	
 	// Atributos de clase	
@@ -31,7 +31,7 @@ public class Alumno {
 	
 	// Atributos contante de objeto	
 	
-	private final String DNI = null;
+	
 	
 	// Atributos de objeto
 	
@@ -43,13 +43,18 @@ public class Alumno {
 	private boolean mayorDeEdad;
 	private byte numeroDeHermanos;
 	private LocalTime horaMaxima;
-	private Number nivelDeInbles;
+	private String nivelDeInbles;
+	private String dni = null;
+	
+	// Atributos predeterminados
+	
+	final LocalDate FECHA_NACIMIENTO_PREDETERMINADO = LocalDate.of(2000, 01, 01);
 	
 	// CONTRUCTOR
 	
-	public Alumno (String nombre, LocalDate fechaNacimiento, double peso, double altura, byte numeroDeHermanos, Number nivelDeInbles, String DNI){
+	public Alumno (String nombre, String apellidos, String dni, LocalDate fechaNacimiento, double peso, double altura, byte numeroDeHermanos, String nivelDeInbles){
 	
-		if (nombre == null  || apellidos == null || fechaNacimiento == null || nivelDeInbles == null ||DNI == null){
+		/*if (nombre == null  || apellidos == null || fechaNacimiento == null || nivelDeInbles == null ||dni == null){
 			
 			throw new IllegalArgumentException (
 				   ("Elguno de los valores introdusidos esta vacio (null)"));
@@ -59,20 +64,53 @@ public class Alumno {
 			throw new IllegalArgumentException (
 				   ("Elguno de los valores introdusidos esta vacio"));
 			
-		} else if (!fechaValidad(fechaNacimiento)){
+		} else */if (!fechaValidad(fechaNacimiento)){
 			
 			throw new IllegalArgumentException (
-					("La fecha no es valida es demaciado antigua. Es menor al año 1980 o superior a el año actual"));
+					("La fecha no es valida. Es menor al año 1980 o superior a el año actual"));
 			
 		} else if (peso < 20 || peso > 300){
 			
 			throw new IllegalArgumentException (
-					("El peso no es valido. Es inferior a 20k o superior a 300k"));
+					("El peso no es valido. Es inferior a 20 o superior a 300"));
+			
+		} else if (altura < 0 || altura > 3){
+			
+			throw new IllegalArgumentException (
+					("La altura no es valido. Es inferior a 0 o superior a 3"));
+			
+		} else if (numeroDeHermanos < 0){
+			
+			throw new IllegalArgumentException (
+					("El numeroDeHermanos no es valido. Es inferior a 0"));
+			
+		} else if (nivelDeInbles){
+			
+			throw new IllegalArgumentException (
+					("El numeroDeHermanos no es valido. Es inferior a 0"));
 			
 		} 
 		
+		this.nombre = nombre;
+		this.fechaNacimiento = fechaNacimiento;
+		this.altura = altura;
+		this.numeroDeHermanos = numeroDeHermanos;
+		this.numeroDeHermanos = numeroDeHermanos;
+		this.nivelDeInbles = nivelDeInbles;
+		this.dni = dni;
+		
 		Alumno.numeroDeAlumnos ++;
 	}
+	
+	public Alumno (String nombre, String apellidos, String dni){
+		
+		 this (nombre, apellidos, dni, null , 0, 0, 0, null);
+		
+	}
+	
+	// METODOS DE OBJETOS
+	
+	// METODOS DE CONTRUCTORES
 	
 	// fechaValidad: 
 	private static boolean fechaValidad (LocalDate fechaNacimiento) {
