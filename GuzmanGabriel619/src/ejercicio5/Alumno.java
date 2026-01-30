@@ -16,6 +16,14 @@ public class Alumno {
 
 	public final static int NUMERO_MAXIMA_DE_ALUMNOS = 1000;
 	
+	public final static String DNI__PREDETERMINADO = "00000000A";
+	public final static String NOMBRE__PREDETERMINADO = "Ninguno";
+	public final static String APELLIDO__PREDETERMINADO = "Ninguno";
+	public final static LocalDate FECHA_NACIMIENTO_PREDETERMINADO = LocalDate.of(2000, 01, 01);
+	public final static boolean TIENE_BECA_PREDETERMINADO = false;
+	public final static double MEDIAS_MODULOS_PREDETERMINADO = 0;
+	public final static int NUMERO_MODULOS_PREDETERMINADO = 0;
+	
 	// Atributos de clase	
 	
 	private static int numeroDeAlumnos = 0;	
@@ -23,7 +31,7 @@ public class Alumno {
 	
 	// Atributos contante de objeto	
 	
-	private final int LIMITE_MODULOS_MATRICILA = 0;	
+	private final int LIMITE_MODULOS_MATRICILA = 5;	
 	
 	// Atributos de objeto
 	
@@ -33,10 +41,11 @@ public class Alumno {
 	private LocalDate fechaNacimiento;
 	private boolean tieneBeca;
 	private double mediaModulosAprobados;
+	private int numeroModulos;
 	
 	// CONTRUCTOR
 	
-	public Alumno(String dni, String nombre, String apellidos, LocalDate fechaNacimiento, boolean tieneBeca, double mediaModulosAprobados){ 
+	public Alumno(String dni, String nombre, String apellidos, LocalDate fechaNacimiento, boolean tieneBeca, double mediaModulosAprobados, int numeroModulos){ 
 		
 		if (nombre == null || dni == null || apellidos == null || fechaNacimiento == null){
 			
@@ -58,25 +67,47 @@ public class Alumno {
 			throw new IllegalArgumentException (
 					("La fecha no es valida. Es menor al año 1980 o superior a el año actual"));
 			
+		} else if (mediaModulosAprobados < 0){
+			
+			throw new IllegalArgumentException (
+					("La media de midulos aporovados no puede ser negativo"));
+			
+		} else if (numeroModulos < 0 || numeroModulos > LIMITE_MODULOS_MATRICILA){
+			
+			throw new IllegalArgumentException (
+					("El numero de modulos no puede ser negaativo o superior a el maximo permitido"));
+			
 		}
 		
+		this.dni = dni;
 		this.nombre = nombre;
-		this.precio = precio;
-		this.cuantosQuedan = cuantosQuedan;
+		this.apellidos = apellidos;
+		this.fechaNacimiento = fechaNacimiento;
+		this.tieneBeca = tieneBeca;
+		this.mediaModulosAprobados = mediaModulosAprobados;
+		this.numeroModulos = numeroModulos;
+		
+		
+		
+		this.numeroDeAlumnos --;
 	
 	}
 	
 	public Alumno(String dni, String nombre, String apellidos){ 
 	
-		 this ();
+		 this (dni, nombre, apellidos, FECHA_NACIMIENTO_PREDETERMINADO, TIENE_BECA_PREDETERMINADO, MEDIAS_MODULOS_PREDETERMINADO, NUMERO_MODULOS_PREDETERMINADO);
 		 
-		 System.out.println("Se creo un objeto con los datos predeterminados: (Nombre = ninguno, Precio = 0, cuantosQuedan = 0)");
+		 System.out.println("Se creo un objeto con los siquientes datos predeterminados: ("
+		 		+ "Fecha nacimiento = 2000-01-01, "
+		 		+ "Beca = false, "
+		 		+ "Media modulos aprovados = 0, "
+		 		+ "Numero de modulos = 0)");
 		
 	}
 	
 	public Alumno(){ 
 		
-		 this ();
+		 this (DNI__PREDETERMINADO, NOMBRE__PREDETERMINADO, APELLIDO__PREDETERMINADO, FECHA_NACIMIENTO_PREDETERMINADO, TIENE_BECA_PREDETERMINADO, MEDIAS_MODULOS_PREDETERMINADO, NUMERO_MODULOS_PREDETERMINADO);
 		 
 		 System.out.println("Se creo un objeto con los datos predeterminados: (Nombre = ninguno, Precio = 0, cuantosQuedan = 0)");
 		
