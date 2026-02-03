@@ -1,3 +1,9 @@
+/*
+Descripción: 
+Autor: Gabriel Guzmán
+Fecha: 15/01/2026
+*/
+
 package ejercicio01;
 
 public class Linea {
@@ -112,6 +118,67 @@ public class Linea {
 									
 		}
 		
+		//mueveIzquierda: Mueve la linia a la izquierda.
+		public void mueveIzquierda (double movimiento) throws IllegalArgumentException{
+					
+			if (movimiento <= 0) {
+				throw new IllegalArgumentException("El movimiento debe ser mayor que 0");
+			}
+							
+			double movimientoA = this.puntoA.getX() - movimiento;
+			double movimientoB = this.puntoB.getX() - movimiento;
+					
+			this.puntoA.setX(movimientoA);
+			this.puntoB.setX(movimientoB);
+											
+		}
+		
+		//mueveArriba: Mueve la linia a arriba.
+		public void mueveArriba(double movimiento) throws IllegalArgumentException{
+							
+			if (movimiento <= 0) {
+				throw new IllegalArgumentException("El movimiento debe ser mayor que 0");
+			}
+									
+			double movimientoA = this.puntoA.getY() + movimiento;
+			double movimientoB = this.puntoB.getY() + movimiento;
+							
+			this.puntoA.setY(movimientoA);
+			this.puntoB.setY(movimientoB);
+													
+		}
+		
+		//mueveAbajo: Mueve la linia a abajo.
+		public void mueveAbajo(double movimiento) throws IllegalArgumentException{
+									
+			if (movimiento <= 0) {
+				throw new IllegalArgumentException("El movimiento debe ser mayor que 0");
+			}
+											
+			double movimientoA = this.puntoA.getY() - movimiento;
+			double movimientoB = this.puntoB.getY() - movimiento;
+									
+			this.puntoA.setY(movimientoA);
+			this.puntoB.setY(movimientoB);
+															
+		}
+		
+		//EscribirLinea: Da un resultado en pantalla mostrando los datos de la linia con el siquiente formato:[puntoA,puntoB].
+		public void escribirLinea() throws IllegalArgumentException{
+													
+			double xA;
+			double xB;
+			double yA;
+			double yB;
+			
+			xA = this.puntoA.getX();
+			xB = this.puntoB.getX();
+			yA = this.puntoA.getY();
+			yB = this.puntoB.getY();
+			
+			System.out.println("[("+ xA +"," +yA+"),("+ xB +"," +yB+")]");
+																	
+		}
 
 	// Ejemplo
 		
@@ -138,5 +205,22 @@ public class Linea {
 		System.out.println(linea1.toString());
 		System.out.println(linea2.toString());
 		
+		linea1.mueveDerecha(2);
+		
+		System.out.println(linea1.toString());
+		
+		linea1.mueveIzquierda(2);
+		
+		System.out.println(linea1.toString());
+		
+		linea1.mueveArriba(2);
+		
+		System.out.println(linea1.toString());
+		
+		linea1.mueveAbajo(2);
+		
+		System.out.println(linea1.toString());
+		
+		linea1.escribirLinea();
 	}
 }
