@@ -6,6 +6,7 @@ public class Empleado {
 
 	// Atributos fijos de Clases
 	
+	private final static int SALARIO_BASE_MINIMO = 1200;
 	
 	// Atributos de Clases
 	
@@ -38,9 +39,9 @@ public class Empleado {
 			
 			throw new IllegalArgumentException("El NIF no es valido");
 			
-		} else if (sueldoBase < 0 ) {
+		} else if (sueldoBase < SALARIO_BASE_MINIMO ) {
 			
-		    throw new IllegalArgumentException("El sueldo base no puede ser negativo");
+		    throw new IllegalArgumentException("El sueldo base no puede ser menor al salario minimo");
 		    
 		} else if (pagaHoraExtra < 0) {
 			
@@ -53,6 +54,10 @@ public class Empleado {
 		} else if (validarTipoIRPF(tipoIRPF , sueldoBase,casado,numeroHijos)) {
 			
 		    throw new IllegalArgumentException("El tipo de IRPF no es valido");
+		    
+		} else if (numeroHijos < 0) {
+			
+		    throw new IllegalArgumentException("La paga por hora extra no puede ser negativa");
 		    
 		}
 		
@@ -71,14 +76,78 @@ public class Empleado {
 		
 	}
 		
-	public Empleado(){ 
+	public Empleado(String NIF , String apellidos , String nombre ){ 
 			 
-			
+		this(NIF, apellidos ,nombre , SALARIO_BASE_MINIMO, 0, 0, 0.10, false,0);
+	}
+	
+	public Empleado(){ 
+		 
+		this(null, null ,null , SALARIO_BASE_MINIMO, 0, 0, 0.10, false,0);
 	}
 	
 	// METODOS DE OBJETOS
 	
+	//toString: Mustra los datos del objeto. String
+		public String toString() {
+		     return "[" + this.NIF + ","+ this.apellidos +","+ this.nombre +","+ this.sueldoBase +","+ this.pagaHoraExtra +","+ this.horaExtraMes +","+ this.tipoIRPF +"," + this.casado + "," + this.numeroHijos + "]";
+		 }
+					
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public String geApellido() {
+						
+			return this.apellidos;
+									
+		} 
 		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public String getNombre() {
+								
+			return this.nombre;
+											
+		}
+				
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public int getSueldoBase() {
+								
+			return this.sueldoBase;
+											
+		}		
+		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public int getPagaHoraExtra() {
+								
+			return this.pagaHoraExtra;
+											
+		}
+		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public int getHoraExtraMes() {
+								
+			return this.horaExtraMes;
+											
+		}
+		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public double getTipoIRPF() {
+								
+			return this.tipoIRPF;
+											
+		}
+		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public boolean getCasado() {
+								
+			return this.casado;
+											
+		}
+		
+		//getCapacidadMaxima: Muestra la capacidad maxima. int
+		public int getNumeroHijos() {
+								
+			return this.numeroHijos;
+											
+		}
 		
 	// METODOS DE clase
 	
@@ -109,7 +178,7 @@ public class Empleado {
 		boolean valido = false;
 		int sueldoBrutoAnual = SueldoBase * 12;
 		
-		if (tipoIRPF < 0 || tipoIRPF > 0.45) {
+		if (tipoIRPF < 0.00 || tipoIRPF > 0.45) {
 			
 			return false;
 			
@@ -185,8 +254,10 @@ public class Empleado {
 	                true,
 	                2
 	        );
+		 
+		 
 
-	        System.out.println("Empleado creado correctamente");
+	        System.out.println(e.toString());
 			
 	}
 	
