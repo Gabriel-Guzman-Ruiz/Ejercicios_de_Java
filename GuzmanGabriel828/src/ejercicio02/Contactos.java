@@ -14,7 +14,7 @@ public class Contactos implements Comparable<Contactos>{
 	// Atributos fijos de Clases
 	
 	private static final String NOMBRE_PREDETERMINADO = "VACIO";
-	private static final int TELEFONO_PREDETERMINADO = 000000000;
+	private static final int TELEFONO_PREDETERMINADO = 100000000;
 	private static final String GMAIL_PREDETERMINADO = "VACIO";
 	private static final LocalDate FECHANACIMIENTO_PREDETERMINADO =  LocalDate.of(2000, 01, 01);
 	
@@ -33,16 +33,16 @@ public class Contactos implements Comparable<Contactos>{
 		
 	public Contactos(String nombre, int telefono, String gmail, LocalDate fechaNacimiento) throws IllegalArgumentException{
 				
-		if (nombre == null || gmail == null) {
+		if (nombre == null || gmail == null || nombre.equals("")) {
 	        throw new IllegalArgumentException("El numbre y gmail no puede ser nulo");
-		} else if ( telefono < 000000000 || telefono > 999999999) {
+		} else if ( telefono < 100000000 || telefono > 999999999) {
 	        throw new IllegalArgumentException("El telefono no es valido, tiene que tener 9 sigras");
 		} else if (listaTelefonos.contains(Integer.valueOf(telefono)) ) {
 	        throw new IllegalArgumentException("El telefono no es valido, es repetido");
 		}else if (!gmailValido(gmail)) {
 	        throw new IllegalArgumentException("el gmail no es valido, tiene que tener un @ y .");
 		} else if (!fechaNacimientoValido(fechaNacimiento)) {
-	        throw new IllegalArgumentException("el gmail no es valido, despues de 1900 y andes de la fecha actual (" + LocalDate.now() + ")");
+	        throw new IllegalArgumentException("La fecha no es valido, despues de 1900 y andes de la fecha actual (" + LocalDate.now() + ")");
 		}
 		
 		
@@ -107,7 +107,7 @@ public class Contactos implements Comparable<Contactos>{
 	//setNombre: Cambia el nombre.
 	public void setNombre (String nombre) throws IllegalArgumentException{
 		
-		if (nombre == null) {
+		if (nombre == null ||  nombre.equals("")) {
 	        throw new IllegalArgumentException("El numbre no puede ser nulo");
 		}
 		
@@ -186,10 +186,9 @@ public class Contactos implements Comparable<Contactos>{
 			
 			verdadero = false;
 			
-		} else if (gmail.contains(gmail)) {
+		} 
 			
-			verdadero = gmail.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$");
-		}
+		verdadero = gmail.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$");
 		
 		return verdadero;
 						
@@ -246,7 +245,7 @@ public class Contactos implements Comparable<Contactos>{
 				"Isabel", "Jorge", "Lidia", "Miguel", "Nuria"
 				}; 
 		
-		int numeroAleatorio = (int) (Math.random()*49) +1;
+		int numeroAleatorio = (int) (Math.random()*50);
 		
 		nombreAleatorio = numbreAleatorioAray[numeroAleatorio];
 		
@@ -275,7 +274,7 @@ public class Contactos implements Comparable<Contactos>{
 			    "alvaro_11@hotmail.com","monica.lopez@gmail.com"
 			};
 		
-		int numeroAleatorio = (int) (Math.random()*49) +1;
+		int numeroAleatorio = (int) (Math.random()*50);
 		
 		gmailAleatorio = emailAliatorios[numeroAleatorio];
 		
@@ -286,13 +285,27 @@ public class Contactos implements Comparable<Contactos>{
 	//telefonoAleatorio: da un telefono aleatorio. int
 	private static int telefonoAleatorio(){
 		
-		int telefonoAleatorio;
+		boolean error = false;
 		
-		telefonoAleatorio = (int) (Math.random()*999999999) + 1;
+		int telefonoAleatorios;
 		
-		return telefonoAleatorio;
-						
+		do {
+			
+			telefonoAleatorios = (int) (Math.random()*999999999) + 100000000;
+			
+			error = false;
+			
+			if (listaTelefonos.contains(Integer.valueOf(telefonoAleatorios)) ) {
+				
+				  error = true;
+			}
+		
+		} while (error);
+		
+		return telefonoAleatorios;			
+			
 	}
+					
 	
 	//fechaNacimientoAleatorio: da un fecha aleatorio. LocalDate
 	private static LocalDate fechaNacimientoAleatorio (){
@@ -330,7 +343,7 @@ public class Contactos implements Comparable<Contactos>{
 	
 	// METODOS EXTERNOS
 	
-	// Ordena por la edad y el nombre.	
+	// Ordena por el nombre.	
     @Override
     public int compareTo(Contactos Contacto) { 
     	

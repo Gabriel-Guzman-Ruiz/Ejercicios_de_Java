@@ -2,9 +2,13 @@ package ejercicio02;
 
 import java.time.DateTimeException;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
+
+import ejercicio01.Atleta;
 
 public class Ejercicio02 {
 	
@@ -32,7 +36,7 @@ public class Ejercicio02 {
 			nuevoContacto = Contactos.ContactoAleatorio();
 			
 			coleccion.add(nuevoContacto);
-			System.out.println(i +") Se agrego un atleta: "+ nuevoContacto.toString());
+			System.out.println(i +") Se agrego un contacto: "+ nuevoContacto.toString());
 			
 			cantidadContactos ++;
 			
@@ -42,8 +46,8 @@ public class Ejercicio02 {
 		System.out.println("Datos");
 		System.out.println("-----");
 		
-		System.out.println("Numero de atletas: " + cantidadContactos);
-		System.out.println("Lista de atletas: " + coleccion);
+		System.out.println("Numero de contactos: " + cantidadContactos);
+		System.out.println("Lista de contactos: " + coleccion);
 		
 		System.out.println("--------");
 		System.out.println("Interfas");
@@ -51,20 +55,21 @@ public class Ejercicio02 {
 		
 		boolean salir = false;
 		boolean error = false;
-		char Elecion;
+		char Eleccion;
 		
 		do {
 			
-			System.out.println("a) ingresar contacto\r\n"
-					+ "b) consultar un nombre y mostrar todos sus datos\r\n"
+			System.out.println("a) ingresar contacto.\r\n"
+					+ "b) consultar un nombre y mostrar todos sus datos.\r\n"
 					+ "c) mostrar todos los datos de los contactos ordenados por nombre.\r\n"
-					+ "d) dada una fecha mostrar aquellos contactos que hayan nacido en ese año.");
+					+ "d) dada una fecha mostrar aquellos contactos que hayan nacido en ese año.\r\n"
+					+ "0) serar interfas.");
 			System.out.println("----------------------------------------------------------------");
 			
-			System.out.print("Elecion: ");
-			Elecion = pedido.next().charAt(0);
+			System.out.print("Eleccion: ");
+			Eleccion = pedido.next().charAt(0);
 			
-			if (Elecion == 'a' || Elecion == 'A') {
+			if (Eleccion == 'a' || Eleccion == 'A') {
 				
 				System.out.println("-----------------");
 				System.out.println("ingresar contacto");
@@ -76,35 +81,39 @@ public class Ejercicio02 {
 				
 				int telefono;
 				
-				String fechaNacimiento;
+				String fecha;
 				
 				
 				do {
 				
 					try {
+						
+						pedido.nextLine();
 					
 						System.out.print("Nombre (Obligatorio): ");
 						nombre = pedido.nextLine();
-						System.out.println("--------");
-						
-						System.out.print("gmail (*@*.* | Obligatorio): ");
-						gmail = pedido.next();
-						System.out.println("-------");
 						
 						System.out.print("telefono (9 digitos): ");
 						telefono = pedido.nextInt();
-						System.out.println("----------");
+						
+						System.out.print("gmail (*@*.* | Obligatorio): ");
+						gmail = pedido.next();
 						
 						System.out.print("fechaNacimiento (1900-" + LocalDate.now().getYear()+ " | dd/mm/aaaa): ");
-						fechaNacimiento = pedido.next();
-						System.out.println("--------");
+						fecha = pedido.next();
 						
+						DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+
+						LocalDate fechaNacimiento = LocalDate.parse(fecha, formato);
 						
+						nuevoContacto = new Contactos(nombre, telefono, gmail, fechaNacimiento);
 						
-						System.out.println("ingresar contacto");
-						System.out.println("-----------------");
+						coleccion.add(nuevoContacto);
+						System.out.println("---------------------------------------------");
+						System.out.println("Se agrego un contacto: "+ nuevoContacto.toString());
+						System.out.println("---------------------------------------------");
 						
-						
+						cantidadContactos ++;
 						
 						error = false;
 					
@@ -112,29 +121,126 @@ public class Ejercicio02 {
 						
 						System.out.println("Alguno de los datos no es valido");
 						
+						pedido.nextLine();
+						
 						error = true;
 						
+					}	catch (DateTimeParseException ex2) {
+						
+						System.out.println("La fecha no tiene un formato valido");
+						
+						pedido.nextLine();
+						
+						error = true;
 					}
 				
 				} while (error);
 				
-			} else if (Elecion == 'b' || Elecion == 'B'){
+			} else if (Eleccion == 'b' || Eleccion == 'B'){
 				
 				System.out.println("---------------------------------------------");
 				System.out.println("consultar un nombre y mostrar todos sus datos");
 				System.out.println("---------------------------------------------");
 				
-			} else if (Elecion == 'c' || Elecion == 'C'){
+				String nombre;
+				
+				
+				do {
+					pedido.nextLine();
+					
+					int contador = 0;
+					
+					System.out.print("Dame al nombre: ");
+					nombre = pedido.nextLine();
+					
+					for(int i = 0; i < coleccion.size(); i ++) {
+					
+						if (nombre.equals( coleccion.get(i).getNombre())){
+							
+							
+							System.out.println("---------------------------------------------");
+							System.out.println("El contacto: "+ coleccion.get(i).toString());
+							System.out.println("---------------------------------------------");
+							
+							contador ++;
+							
+							error = false;
+							
+						}
+					
+					}
+					
+					if (contador == 0) {
+						
+						System.out.println("El nombre no esta en la colecion");
+						
+						error = true;
+					}
+				
+				} while (error);				
+				
+			} else if (Eleccion == 'c' || Eleccion == 'C'){
 				
 				System.out.println("-------------------------------------------------------------");
 				System.out.println("mostrar todos los datos de los contactos ordenados por nombre");
 				System.out.println("-------------------------------------------------------------");
 				
-			} else if (Elecion == 'd' || Elecion == 'D'){
+				Collections.sort(coleccion);
+				System.out.println("---------------------------------------------");
+				System.out.println("Lista de atletas: " + coleccion);
+				System.out.println("---------------------------------------------");
+				
+			} else if (Eleccion == 'd' || Eleccion == 'D'){
 				
 				System.out.println("---------------------------------------------------------------------");
 				System.out.println("dada una fecha mostrar aquellos contactos que hayan nacido en ese año");
 				System.out.println("---------------------------------------------------------------------");
+				
+				int anno;
+				
+				int contador = 0;
+				
+				do {
+					pedido.nextLine();
+					
+
+					
+					System.out.print("Dame el año: ");
+					anno = pedido.nextInt();
+					
+
+					
+					for(int i = 0; i < coleccion.size(); i ++) {
+					
+						if (anno == coleccion.get(i).getFechaNacimiento().getYear()){
+							
+							
+							System.out.println("---------------------------------------------");
+							System.out.println("El contacto: "+ coleccion.get(i).toString());
+							System.out.println("---------------------------------------------");
+							
+							contador ++;
+							
+							
+						}
+					
+					}
+					
+					if (contador == 0) {
+						
+						System.out.println("Ningún contacto nació en ese año");
+						
+					}
+				
+				} while (contador == 0);		
+				
+				
+			} else if (Eleccion == '0'){
+				
+				System.out.println("Serar interfas");
+				System.out.println("--------------------");
+				
+				salir = true;
 				
 			} else {
 				
