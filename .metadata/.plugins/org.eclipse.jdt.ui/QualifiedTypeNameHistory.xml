@@ -6,4 +6,6 @@
     <fullyQualifiedTypeName name="java.time.LocalDate"/>
     <fullyQualifiedTypeName name="java.lang.Math"/>
     <fullyQualifiedTypeName name="ejercicio02.Contactos"/>
+    <fullyQualifiedTypeName name="ejercicio04.Travajadores.Sexo"/>
+    <fullyQualifiedTypeName name="ejercicio04.Travajadores.EstadoCivil"/>
 </qualifiedTypeNameHistroy>
