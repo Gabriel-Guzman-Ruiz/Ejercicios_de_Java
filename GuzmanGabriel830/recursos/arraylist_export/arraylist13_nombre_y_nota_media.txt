@@ -1,0 +1,111 @@
+Nombre: Bintana , Esteban Martín; Nota media: 4.0
+Nombre: Cotilla Florido, Alberto; Nota media: 2.0
+Nombre: García Benítez, Nazareth; Nota media: 4.0
+Nombre: García Valderrama, Sergio; Nota media: 1.4
+Nombre: González Pereau, Saray; Nota media: 5.6
+Nombre: González Pérez, Laura; Nota media: 7.0
+Nombre: Heredia Mesa, Pablo; Nota media: 4.6
+Nombre: Martínez Ruiz, Mónica; Nota media: 2.6
+Nombre: Plaza Gallego, Juan; Nota media: 1.4
+Nombre: Pérez Pellisero, Braian; Nota media: 5.6
+Nombre: Rielves Barea, Manuel; Nota media: 4.8
+Nombre: Rueda Cruz, María; Nota media: 5.4
+Nombre: Ruiz Jiménez, Rafael; Nota media: 4.8
+Nombre: Russell , Natalie; Nota media: 4.4
+Nombre: Subiri Rueda, Fco José; Nota media: 2.8
+Nombre: Vilches Moreno, Lola Isabel; Nota media: 8.0
+Nombre: Virella Robles, Carolina; Nota media: 4.4
+Nombre: Aguilera Delgado, Enrique; Nota media: 7.8
+Nombre: Benítez Gaitán, Juan Cruz; Nota media: 5.6
+Nombre: Cruz Pino, Raquel; Nota media: 4.6
+Nombre: Domínguez Tirado, José; Nota media: 6.2
+Nombre: Donaire Rodríguez, Miguel Ángel; Nota media: 5.4
+Nombre: Donaire Vergara, Eva María; Nota media: 5.2
+Nombre: Durán , Mariano; Nota media: 4.2
+Nombre: El Mazani , Mohammed; Nota media: 4.0
+Nombre: Garrido Delgado, Pablo; Nota media: 4.6
+Nombre: González Solano, Ana Belén; Nota media: 1.2
+Nombre: Guerra Cano, Tamara; Nota media: 2.8
+Nombre: Hurtado García, Carmen María; Nota media: 4.0
+Nombre: Lima Franco, Laura; Nota media: 3.0
+Nombre: Luque González, Christian; Nota media: 7.8
+Nombre: Martínez Calderero, Aarón; Nota media: 4.4
+Nombre: Morales Flores, Víctor; Nota media: 1.2
+Nombre: Peula Cordero, Yazmina; Nota media: 5.0
+Nombre: Ramírez Farfán, Carmen; Nota media: 5.6
+Nombre: Requena Carrasco, Rafael; Nota media: 3.2
+Nombre: Robles Ortiz, Sofía; Nota media: 5.4
+Nombre: Rueda Calzada, Laura; Nota media: 7.6
+Nombre: Salas Márquez, Jennifer; Nota media: 2.4
+Nombre: Sánchez Ortiz, Álvaro José; Nota media: 6.0
+Nombre: Aranda Vázquez, José; Nota media: 2.4
+Nombre: Castillo Alcázar, Alejandro; Nota media: 4.8
+Nombre: Cordón López, Rocío; Nota media: 2.6
+Nombre: Mantero González, Juan; Nota media: 4.6
+Nombre: Martín Soler, José Manuel; Nota media: 3.8
+Nombre: Menaique Álvarez, Celia María; Nota media: 4.4
+Nombre: Mora Castillo, Paola; Nota media: 4.6
+Nombre: Ramírez Pérez, David; Nota media: 3.4
+Nombre: Recchia , María Fiorella; Nota media: 3.2
+Nombre: Rendón Alba, Jorge Luis; Nota media: 2.8
+Nombre: Roberto Jaimes, Kelly Ximena; Nota media: 4.6
+Nombre: Rueda Vega, Ana Carmen; Nota media: 4.2
+Nombre: Ruiz Rueda, Sebastián; Nota media: 3.6
+Nombre: Vegas Carrasco, María Encarnación; Nota media: 2.2
+Nombre: Villar Risco, Omar; Nota media: 7.2
+Nombre: Villatoro Postigo, Adrián; Nota media: 4.8
+Nombre: Wilson , Luke; Nota media: 2.2
+Nombre: Benítez Maya, Luciana; Nota media: 6.8
+Nombre: Castillo Viñolo, Francisco; Nota media: 3.0
+Nombre: Fontaneda Macías, Borja; Nota media: 6.0
+Nombre: García Bernal, María Esther; Nota media: 7.8
+Nombre: García López, Elena; Nota media: 6.2
+Nombre: García Romero, Álvaro; Nota media: 4.4
+Nombre: García Sánchez, Carmen; Nota media: 3.8
+Nombre: González Bernal, Cristóbal; Nota media: 5.8
+Nombre: Hernández Jack, Irene; Nota media: 5.4
+Nombre: Jalao Puertas, Jonathan; Nota media: 1.0
+Nombre: López Muro, Rosario; Nota media: 3.4
+Nombre: López Muro, Rosario; Nota media: 3.4
+Nombre: Mayer Jiménez, Alejandro; Nota media: 1.0
+Nombre: Molina González, Samuel Oliver; Nota media: 3.4
+Nombre: Navarro García, María Azahara; Nota media: 4.4
+Nombre: Núñez Ramírez, Paula; Nota media: 3.4
+Nombre: Oïbrien , George Iván; Nota media: 1.0
+Nombre: Reina Romero, José Daniel; Nota media: 6.2
+Nombre: Sales Briales, Paloma; Nota media: 3.8
+Nombre: Solano Fernández, Alejandro David; Nota media: 1.0
+Nombre: Sánchez López, Alba; Nota media: 3.2
+Nombre: Vargas Santiago, Samuel; Nota media: 1.4
+Nombre: Álvarez Rodríguez, Dayana Vanessa; Nota media: 5.6
+Nombre: Abdeselam Blanco, Hillary; Nota media: 6.0
+Nombre: Amaya Guillén, José Pablo; Nota media: 5.0
+Nombre: Artacho Silva, Mar; Nota media: 6.8
+Nombre: Becerra García, Javier; Nota media: 5.0
+Nombre: Ben Aouda , Mounir; Nota media: 1.0
+Nombre: Benítez Berenjeno, Laura; Nota media: 7.8
+Nombre: Bernat Rodríguez, Sandra; Nota media: 5.0
+Nombre: Bravo Guzmán, Mireya; Nota media: 4.8
+Nombre: Cañas Arcos, Esther; Nota media: 6.8
+Nombre: Cecilio Gibaja, Sara; Nota media: 3.2
+Nombre: Delgado Rodríguez, Daniel; Nota media: 6.2
+Nombre: Farfán González, María de la Paloma; Nota media: 5.0
+Nombre: Moreno Santamaría, José Luis; Nota media: 3.8
+Nombre: Moreno Vázquez, Tomás; Nota media: 6.2
+Nombre: Muñoz Bellido, Sandra; Nota media: 2.6
+Nombre: Perea Sierra, Antonio Mateo; Nota media: 4.4
+Nombre: Plaza Pérez, Nuria María; Nota media: 5.4
+Nombre: Postigo Vázquez, Salvador; Nota media: 4.2
+Nombre: Prieto Granja, Alicia; Nota media: 3.6
+Nombre: Puertas Moreno, Andrea; Nota media: 5.4
+Nombre: Rico Pinazo, Pedro; Nota media: 8.6
+Nombre: Rodríguez Baro, Irene; Nota media: 5.6
+Nombre: Rodríguez Horcajo, Noelia; Nota media: 7.4
+Nombre: Rodríguez Márquez, Ezequiel; Nota media: 7.6
+Nombre: Romero González, Nazaret; Nota media: 5.6
+Nombre: Rueda Blanco, Oscar; Nota media: 7.2
+Nombre: Serrano Doña, Ismael; Nota media: 7.0
+Nombre: Solano Garrido, Alberto; Nota media: 3.4
+Nombre: Solera Benítez, Paola; Nota media: 5.0
+Nombre: Sánchez Solano, Ana Tadea; Nota media: 7.0
+Nombre: Vega Jiménez, Ana María; Nota media: 5.2

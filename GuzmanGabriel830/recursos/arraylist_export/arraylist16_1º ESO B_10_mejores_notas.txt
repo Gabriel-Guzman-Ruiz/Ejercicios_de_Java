@@ -1,0 +1,10 @@
+1º ESO B;Luque González, Christian;10;9;9;5;6
+1º ESO B;Rueda Calzada, Laura;9;8;9;5;7
+1º ESO B;Aguilera Delgado, Enrique;8;8;9;6;8
+1º ESO B;Ramírez Farfán, Carmen;7;7;4;4;6
+1º ESO B;Donaire Rodríguez, Miguel Ángel;6;4;8;2;7
+1º ESO B;Donaire Vergara, Eva María;6;5;5;3;7
+1º ESO B;Durán , Mariano;6;4;6;2;3
+1º ESO B;Martínez Calderero, Aarón;6;4;5;1;6
+1º ESO B;Sánchez Ortiz, Álvaro José;6;6;9;3;6
+1º ESO B;Benítez Gaitán, Juan Cruz;5;6;8;3;6

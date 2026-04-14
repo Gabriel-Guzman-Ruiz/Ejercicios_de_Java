@@ -1,0 +1,6 @@
+Grupo: 1º ESO C
+Nota media de Matemáticas: 3.9411764705882355
+Nota media de Lengua: 4.117647058823529
+Nota media de Física: 4.705882352941177
+Nota media de Química: 2.6470588235294117
+Nota media de Inglés: 3.823529411764706

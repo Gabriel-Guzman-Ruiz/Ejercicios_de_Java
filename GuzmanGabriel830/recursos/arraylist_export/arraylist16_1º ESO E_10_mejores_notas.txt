@@ -1,0 +1,10 @@
+1º ESO E;Benítez Berenjeno, Laura;9;8;7;6;9
+1º ESO E;Rico Pinazo, Pedro;9;9;10;5;10
+1º ESO E;Delgado Rodríguez, Daniel;8;6;6;5;6
+1º ESO E;Rodríguez Horcajo, Noelia;8;9;7;4;9
+1º ESO E;Rodríguez Márquez, Ezequiel;8;8;8;5;9
+1º ESO E;Abdeselam Blanco, Hillary;7;4;8;5;6
+1º ESO E;Bernat Rodríguez, Sandra;7;4;6;1;7
+1º ESO E;Cañas Arcos, Esther;7;6;7;5;9
+1º ESO E;Romero González, Nazaret;7;4;6;4;7
+1º ESO E;Rueda Blanco, Oscar;7;8;8;5;8

@@ -1,0 +1,6 @@
+Grupo: 1º ESO D
+Nota media de Matemáticas: 3.9130434782608696
+Nota media de Lengua: 3.652173913043478
+Nota media de Física: 4.695652173913044
+Nota media de Química: 3.217391304347826
+Nota media de Inglés: 4.391304347826087

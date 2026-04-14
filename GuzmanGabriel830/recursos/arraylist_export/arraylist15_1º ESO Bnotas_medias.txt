@@ -1,0 +1,6 @@
+Grupo: 1º ESO B
+Nota media de Matemáticas: 4.6521739130434785
+Nota media de Lengua: 4.826086956521739
+Nota media de Física: 5.608695652173913
+Nota media de Química: 3.5217391304347827
+Nota media de Inglés: 4.695652173913044

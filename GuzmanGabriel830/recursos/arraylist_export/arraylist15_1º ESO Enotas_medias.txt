@@ -1,0 +1,6 @@
+Grupo: 1º ESO E
+Nota media de Matemáticas: 5.645161290322581
+Nota media de Lengua: 5.419354838709677
+Nota media de Física: 6.225806451612903
+Nota media de Química: 3.967741935483871
+Nota media de Inglés: 5.806451612903226
