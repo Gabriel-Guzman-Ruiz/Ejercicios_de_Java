@@ -9,15 +9,15 @@ public class Alumno implements Comparable<Alumno>{
 	// Atributos de objeto
 	private String grupo;
 	private String nombre;
-	private double matematicas;
-	private double lengua;
-	private double fisica;
-	private double quimica;
-	private double ingles;
+	private int matematicas;
+	private int lengua;
+	private int fisica;
+	private int quimica;
+	private int ingles;
 		
 	// CONTRUCTOR
 		
-	public Alumno(String grupo, String nombre, double matematicas, double lengua, double fisica, double quimica, double ingles){
+	public Alumno(String grupo, String nombre, int matematicas, int lengua, int fisica, int quimica, int ingles){
 				
 		setGrupo(grupo);
 		setNombre(nombre);
@@ -33,6 +33,11 @@ public class Alumno implements Comparable<Alumno>{
 	//toString: Mustra los datos del objeto. String
     public String toString() {
         return "Alumno: (" + grupo + ", "  + nombre + ", " + matematicas + ", " + lengua + ", " + fisica + ", " + quimica + ", " + ingles +")";
+    }
+    
+	//getNombre: Mustra los datos del objeto. String
+    public String getNombre() {
+        return nombre;
     }
 	
 	//setGrupo: Cambia el grupo.
@@ -58,7 +63,7 @@ public class Alumno implements Comparable<Alumno>{
 	}
 	
 	//setMatematicas: Cambia la nota.
-	public void setMatematicas (double matematicas) throws IllegalArgumentException{
+	public void setMatematicas (int matematicas) throws IllegalArgumentException{
 		
 		if (ingles < 0 || ingles > 10) {
 	        throw new IllegalArgumentException("No esta bien la nota");
@@ -70,7 +75,7 @@ public class Alumno implements Comparable<Alumno>{
 	
 	
 	//setLenguas: Cambia la nota.
-	public void setLenguas (double lengua) throws IllegalArgumentException{
+	public void setLenguas (int lengua) throws IllegalArgumentException{
 		
 		if (lengua < 0 || lengua > 10) {
 	        throw new IllegalArgumentException("No esta bien la nota");
@@ -81,7 +86,7 @@ public class Alumno implements Comparable<Alumno>{
 	}
 	
 	//setFisica: Cambia la nota.
-	public void setFisica (double fisica) throws IllegalArgumentException{
+	public void setFisica (int fisica) throws IllegalArgumentException{
 		
 		if (fisica < 0 || fisica > 10) {
 	        throw new IllegalArgumentException("No esta bien la nota");
@@ -92,7 +97,7 @@ public class Alumno implements Comparable<Alumno>{
 	}
 	
 	//setQuimica: Cambia la nota.
-	public void setQuimica (double quimica) throws IllegalArgumentException{
+	public void setQuimica (int quimica) throws IllegalArgumentException{
 		
 		if (quimica < 0 || quimica > 10) {
 	        throw new IllegalArgumentException("No esta bien la nota");
@@ -103,7 +108,7 @@ public class Alumno implements Comparable<Alumno>{
 	}
 	
 	//setIngles: Cambia la nota.
-	public void setIngles (double ingles) throws IllegalArgumentException{
+	public void setIngles (int ingles) throws IllegalArgumentException{
 		
 		if (ingles < 0 || ingles > 10) {
 	        throw new IllegalArgumentException("No esta bien la nota");
@@ -115,7 +120,7 @@ public class Alumno implements Comparable<Alumno>{
 	
 	//toFileString: Devuelve los datos del objeto para guardarlo en un archivo en formato texto.
 	public String toFileString() {
-	    return grupo + ";" + nombre + ";" + matematicas + ";" +
+	    return  grupo + ";" + nombre + ";" + matematicas + ";" +
 	           lengua + ";" + fisica + ";" + quimica + ";" + ingles;
 	}
 	
