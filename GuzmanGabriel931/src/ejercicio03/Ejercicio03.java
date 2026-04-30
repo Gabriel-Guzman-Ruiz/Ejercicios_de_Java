@@ -10,74 +10,50 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 	
 		Scanner pedido = new Scanner(System.in);
-		
-
         
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Cambiar el nombre de la carpeta ‘Documentos’ a ‘DOCS’");
 		System.out.println("-----------------------------------------------------");
 		
-        File fichero = new File("Documentos");
-        File numbreNuevo = new File("DOCS");
-        
-        fichero.renameTo(numbreNuevo);
-        
-		System.out.println("Nombre archivo: " + fichero.getName());
+        cambiarCarpeta("Documentos","DOCS");
 		
 		System.out.println("-----------------------------------------------------");
 		System.out.println("Cambia la carpeta ‘Fotografias’ a ‘FOTOS’ y el de la carpeta ‘Libros’ a ‘LECTURAS’");
 		System.out.println("-----------------------------------------------------");
 		
-        fichero = new File("Documento/Fotografias");
-        numbreNuevo = new File("FOTOS");
+        cambiarCarpeta("DOCS/Fotografias","FOTOS");
         
-        fichero.renameTo(numbreNuevo);
-        
-		System.out.println("Nombre archivo: " + fichero.getName());
+        cambiarCarpeta("DOCS/Libros","LECTURAS");
 		
-        fichero = new File("Documento/Libros");
-        numbreNuevo = new File("LECTURAS");
-        
-        fichero.renameTo(numbreNuevo);
-        
-		System.out.println("Nombre archivo: " + fichero.getName());
+		System.out.println("---------------------------------------------------------------");
+		System.out.println("Cambiar el nombre de los archivos de la carpetas fotos y libros");
+		System.out.println("---------------------------------------------------------------");
 		
-		System.out.println("-----------------------------------------------------");
-		System.out.println("Cambiar el nombre de la carpeta ‘Documentos’ a ‘DOCS’");
-		System.out.println("-----------------------------------------------------");
-		
-       
-        fichero = new File("DOCS");
-        
-		System.out.println("Nombre archivo: " + fichero.getName() + " A");
-        
-        File [] lista = fichero.listFiles();
-        
-        
-		for (int i = 0; i < lista.length; i ++) {
-			
-			if (lista[i].isDirectory()) {
-				
-				System.out.print("\n" + lista[i].getName()  + " *");
-				
-				
-			} 
-			
-		}
-		
-		for (int i = 0; i < lista.length; i ++) {
-			
-			if (lista[i].isFile()) {
-				
-				System.out.print("\n" + lista[i].getName()  + " A");
-
-			}
-		
-		}
-		
-		System.out.print("\n");
+	
 	
 	}
+	
+	// cambiarCarpeta
+	 public static void cambiarCarpeta(String viejo, String nuevo){
+
+	        File origen = new File(viejo);
+	        File destino = new File(nuevo);
+
+	        if (origen.exists()) {
+
+	            if (origen.renameTo(destino)) {
+
+	                System.out.println(viejo + " cambiado a " + nuevo);
+
+	            } else {
+
+	                System.out.println("No se pudo renombrar " + viejo);
+
+	            }
+
+	        }
+
+	    }
 	
 }
 
